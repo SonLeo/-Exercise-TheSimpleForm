@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            background-color: #D6FEFF;
+        }
+
+        .form-container {
+            width: fit-content;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .form-heading {
+            text-align: center;
+            background-color: #FF4D1C;
+            color: #fff;
+            margin: 0 0 16px;
+            padding: 5px 0;
+            font-weight: 400;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .form-container form {
+            width: 400px;
+            padding: 0 50px;
+        }
+
+        .form-fieldset {
+            border: none;
+        }
+
+        .form-label {
+            width: 68px;
+            text-align: right;
+            display: inline-block;
+            color: #3049B6;
+            font-size: 16px;
+        }
+
+        .form-input > input {
+            padding: 5px 10px;
+        }
+
+        .form-fieldset {
+            display: flex;
+        }
+
+        .form-fieldset > label {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-input {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 10px;
+        }
+
+        input {
+            box-shadow: 3px 3px 0 inset #606060;
+            border: 1px solid #E2E0DA;
+            outline: none;
+        }
+
+        .hobby-input {
+            color: #FF9064;
+        }
+
+        .btn {
+            box-shadow: 2px 2px 0 2px #606060;
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+
+        .btn:first-child {
+            margin-left: 0;
+        }
+        
+        .form-btn {
+            margin-left: 95px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-heading">Sở thích của bạn</h2>
+        <form action="form1.html" method="get">
+            <fieldset class="form-fieldset">
+                <label for="yourname">
+                    <div class="form-label">Họ và tên:</div>
+                    <div class="form-input"><input type="text" name="yourname" id="yourname"></div>
+                </label>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+                <label for="email">
+                    <div class="form-label">Email:</div>
+                    <div class="form-input"><input type="email" name="email" id="email"></div>
+                </label>
+            </fieldset>
+            
+            <fieldset class="form-fieldset">
+                <div class="form-label">Sở thích:</div>
+                <div class="form-input">
+                    <div class="hobby-group">
+                        <div class="hobby-input">
+                            <label for="sport">
+                                <input type="checkbox" name="hobby" id="sport" value="sport">
+                                Thể thao
+                            </label>
+                        </div>
+                        <div class="hobby-input">
+                            <label for="website">
+                                <input type="checkbox" name="hobby" id="website" value="website">
+                                Lướt web
+                            </label>
+                        </div>
+                        <div class="hobby-input">
+                            <label for="tourist">
+                                <input type="checkbox" name="hobby" id="tourist" value="tourist">
+                                Du lịch
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="hobby-group">
+                        <div class="hobby-input">
+                            <label for="music">
+                                <input type="checkbox" name="hobby" id="music" value="music">
+                                Âm nhạc
+                            </label>
+                        </div>
+                        <div class="hobby-input">
+                            <label for="game">
+                                <input type="checkbox" name="hobby" id="game" value="game">
+                                Chơi game
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="hobby-group">
+                        <div class="hobby-input">
+                            <label for="book">
+                                <input type="checkbox" name="hobby" id="book" value="book">
+                                Đọc sách
+                            </label>
+                        </div>
+                        <div class="hobby-input">
+                            <label for="film">
+                                <input type="checkbox" name="hobby" id="film" value="film">
+                                Điện ảnh
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-btn">
+                <input class="btn" type="submit" value="Gửi thông tin">
+                <input class="btn" type="reset" value="Nhập lại">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        .form-container {
+            padding: 10px;
+            background-color: #FFFCAD;
+            width: fit-content;
+            margin: 20px auto;
+        }
+
+        .form-heading {
+            background-color: #D5FCD7;
+            color: #103FFB;
+            margin: 0 0 16px;
+            padding: 5px 10px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .form-fieldset {
+            border: none;
+        }
+
+        .display-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-label {
+            min-width: 68px;
+            color: #103FFB;
+        }
+
+        .form-input {
+            margin-left: 10px;
+        }
+
+        .form-input > input,
+        .form-input select {
+            padding: 5px 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .form-btn {
+            margin-left: 91px;
+        }
+
+        .form-btn .btn {
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-heading">Đăng ký học viên</h2>
+        
+        <fieldset class="form-fieldset">
+            <label for="name" class="display-flex">
+                <div class="form-label">Họ và tên:</div>
+                <div class="form-input">
+                    <input type="text" name="name" id="name">
+                </div>
+            </label>
+        </fieldset>
+        
+        <fieldset class="form-fieldset">
+            <label for="birth" class="display-flex">
+                <div class="form-label">Ngày sinh:</div>
+                <div class="form-input">
+                    <input type="date" name="birth" id="birth">
+                </div>
+            </label>
+        </fieldset>
+                
+        <fieldset class="form-fieldset display-flex">
+            <div class="form-label">Giới tính:</div>
+            <div class="form-input">
+                <label for="male">
+                    <input type="radio" name="male" id="male" checked>
+                    Nam
+                </label>
+                <label for="female">
+                    <input type="radio" name="female" id="female">
+                    Nữ
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+            <label for="address" class="display-flex">
+                <div class="form-label">Địa chỉ:</div>
+                <div class="form-input">
+                    <textarea name="address" id="address" cols="30" rows="5"></textarea>
+                </div>
+            </label>
+        </fieldset>
+        
+        <fieldset class="form-fieldset">
+            <label for="class" class="display-flex">
+                <div class="form-label">Lớp:</div>
+                <div class="form-input">
+                    <select name="class" id="class">
+                        <option value="default" aria-checked="">--Chọn lớp--</option>
+                        <option value="one">Lớp 1</option>
+                        <option value="two">Lớp 2</option>
+                        <option value="three">Lớp 3</option>
+                        <option value="four">Lớp 4</option>
+                        <option value="five">Lớp 5</option>
+                    </select>
+                </div>
+            </label>
+        </fieldset>
+        
+        <fieldset class="form-fieldset">
+            <label for="email" class="display-flex">
+                <div class="form-label">Email:</div>
+                <div class="form-input">
+                    <input type="email" name="email" id="email">
+                </div>
+            </label>
+        </fieldset>
+        
+        <fieldset class="form-fieldset">
+            <label for="phone" class="display-flex">
+                <div class="form-label">Email:</div>
+                <div class="form-input">
+                    <input type="tel" name="phone" id="phone">
+                </div>
+            </label>
+        </fieldset>
+
+        <div class="form-btn">
+            <input class="btn" type="submit" value="Đăng ký">
+            <input class="btn" type="reset" value="Nhập lại">
+        </div>
+    </div>
+</body>
+</html>
